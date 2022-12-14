@@ -12,10 +12,11 @@ namespace LinkedListDataStructure
             //list.Add(70);
             //list.AddFront(30);
             //list.AddFront(56);
+
             list.Add(56);
-            list.AddLast(30);
-            list.AddLast(70);
-     
+            list.Add(70);
+            list.AddMiddle(30);
+
             list.Display();
         }
     }
