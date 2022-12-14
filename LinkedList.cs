@@ -41,13 +41,40 @@ namespace LinkedListDataStructure
         //}
 
 
-        public void RemoveFirst() 
+        //public void RemoveFirst() 
+        //{
+        //    if (this.head == null)
+        //    {
+        //        Console.WriteLine("Empty linked list");
+        //    }
+        //    this.head = this.head.next;
+        //    Console.WriteLine("removed the last node from the list");
+        //}
+
+        public void RemoveLast()
         {
             if (this.head == null)
             {
                 Console.WriteLine("Empty linked list");
             }
-            this.head = this.head.next;
+            else
+            {
+                Node temp = this.head;
+                Node find = null;
+                while (temp.next != null)
+                {
+                    find = temp;
+                    temp = find.next;
+                }
+                if (find == null)
+                {
+                    this.head = null;
+                }
+                else
+                {
+                    find.next = null;
+                }
+            }
             Console.WriteLine("removed the last node from the list");
         }
         public void Display()
