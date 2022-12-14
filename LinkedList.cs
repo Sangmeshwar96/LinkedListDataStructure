@@ -40,25 +40,15 @@ namespace LinkedListDataStructure
         //    Console.WriteLine($"Added {node.data} to the front");
         //}
 
-        public void AddMiddle(int data) 
-        {
-            Node node = new Node(data);
-            if (this.head == null)
-                this.head = node;
-            else
-            {
-                Node temp = this.head;
-                Node middle = this.head;
-                while (temp.next != null && temp.next.next != null)
-                {
-                    temp = temp.next.next;
-                    middle = temp.next;
-                }
-                node.next = middle.next;
-                middle.next = node;
 
+        public void RemoveFirst() 
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Empty linked list");
             }
-            Console.WriteLine($"Added {node.data} to the middle");
+            this.head = this.head.next;
+            Console.WriteLine("removed the last node from the list");
         }
         public void Display()
         {
