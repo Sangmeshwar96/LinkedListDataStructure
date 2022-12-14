@@ -13,9 +13,15 @@ namespace LinkedListDataStructure
             //list.AddFront(30);
             //list.AddFront(56);
 
+            //list.Add(56);
+            //list.Add(70);
+            //list.AddMiddle(30);
+
             list.Add(56);
+            list.Add(30);
             list.Add(70);
-            list.AddMiddle(30);
+            list.Display();
+            list.RemoveFirst();
 
             list.Display();
         }
