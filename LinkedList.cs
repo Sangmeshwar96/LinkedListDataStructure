@@ -27,17 +27,28 @@ namespace LinkedListDataStructure
             }
             Console.WriteLine($"Added {node.data} to the list");
         }
-        public void AddFront(int data) 
+        //public void AddFront(int data) 
+        //{
+        //    Node node = new Node(data);
+        //    if (this.head == null) 
+        //        this.head = null;
+        //    else
+        //    {
+        //        node.next = this.head; 
+        //        this.head = node;
+        //    }
+        //    Console.WriteLine($"Added {node.data} to the front");
+        //}
+        public void AddLast(int data) 
         {
             Node node = new Node(data);
-            if (this.head == null) 
-                this.head = null;
-            else
+            Node temp = head;
+            while (temp.next != null)
             {
-                node.next = this.head; 
-                this.head = node;
+                temp = temp.next;
             }
-            Console.WriteLine($"Added {node.data} to the front");
+            temp.next = node; 
+            Console.WriteLine($"Added {node.data} to the last");
         }
         public void Display()
         {
