@@ -17,11 +17,17 @@ namespace LinkedListDataStructure
             //list.Add(70);
             //list.AddMiddle(30);
 
+            //list.Add(56);
+            //list.Add(30);
+            //list.Add(70);
+            //list.Display();
+            //list.RemoveFirst();
+
             list.Add(56);
             list.Add(30);
             list.Add(70);
             list.Display();
-            list.RemoveFirst();
+            list.RemoveLast();
 
             list.Display();
         }
