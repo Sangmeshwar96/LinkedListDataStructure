@@ -18,7 +18,7 @@ namespace LinkedListDataStructure
             }
             else
             {
-                Node temp = head;
+                Node temp = head; 
                 while (temp.next != null)
                 {
                     temp = temp.next;
@@ -26,6 +26,18 @@ namespace LinkedListDataStructure
                 temp.next = node;
             }
             Console.WriteLine($"Added {node.data} to the list");
+        }
+        public void AddFront(int data) 
+        {
+            Node node = new Node(data);
+            if (this.head == null) 
+                this.head = null;
+            else
+            {
+                node.next = this.head; 
+                this.head = node;
+            }
+            Console.WriteLine($"Added {node.data} to the front");
         }
         public void Display()
         {
@@ -38,7 +50,7 @@ namespace LinkedListDataStructure
             while (temp != null) 
             {
                 Console.Write(temp.data + " ");
-                temp = temp.next;
+                temp = temp.next; 
             }
         }
     }
